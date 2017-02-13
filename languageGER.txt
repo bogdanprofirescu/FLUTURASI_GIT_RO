@@ -7,7 +7,7 @@ Arbeitslosenunterst
 Lohn entsprechend der geleisteten Zeit
 Ruckhaltungen
 Gesundheit
-Unbezahlter Urlaub/Abwesenheit Tage/Stunden
+Unbezahlter Urlaub(Tage)/ Abwesenheit(Stunden)
 Planuberschreitungen netto/Brutto
 Personliche Abzuge
 Uberstunden
@@ -18,9 +18,9 @@ Lohnsteuer
 Nachtstunden
 Speisekarten/Forderungen
 NETTOLOHN
-Krankenurlaub aus Lohnfonds
+Krankenurlaub aus Lohnfonds(Tage)
 Vorschuuss
-Krankenurlaub aus C.C.I
+Krankenurlaub aus C.C.I(Tage)
 Ruckhaltungen
 Standige Zuschlage/Andere Zuschlage
 GELEISTETER BRUTTOLOHN
