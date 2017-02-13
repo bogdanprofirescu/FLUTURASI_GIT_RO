@@ -1,0 +1,42 @@
+Einstellungslohn
+Erholungsurlaub
+Sozialversicherung
+Geleistete Stunden/Stundenlohn
+Erzielter Lohn
+Arbeitslosenunterst
+Lohn entsprechend der geleisteten Zeit
+Ruckhaltungen
+Gesundheit
+Unbezahlter Urlaub/Abwesenheit Tage/Stunden
+Planuberschreitungen netto/Brutto
+Personliche Abzuge
+Uberstunden
+Andere Einkommen
+Nettoeinkommen
+Uberstunden
+Lohnsteuer
+Nachtstunden
+Speisekarten/Forderungen
+NETTOLOHN
+Krankenurlaub aus Lohnfonds
+Vorschuuss
+Krankenurlaub aus C.C.I
+Ruckhaltungen
+Standige Zuschlage/Andere Zuschlage
+GELEISTETER BRUTTOLOHN
+ZAHLUNGREST(LEI)
+LOHNZETTEL ABRECHNUNG (LEI)
+LKW-Fahrer
+TAGEGELD (EUR)
+Januar
+Februar
+März
+April
+Mai
+Juni
+Juli
+August
+September
+Oktober
+November
+Dezember

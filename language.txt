@@ -1,0 +1,42 @@
+Salariu incadrare
+Concediu odihna
+CAS
+Ore lucrate/salariu orar
+Salariu realizat
+Somaj
+Salariu aferent timpului lucrat
+Retineri
+Sanatate
+Concediu fara plata/Absente
+Depasiri plan net/brut
+Deducere personala
+Ore suplimentare
+Alte venituri
+Venit net
+Ore suplimentare
+Impozit pe salariu
+Ore de noapte
+Tichete masa/Stimulente
+SALARIU NET
+C.M. din fd salarii
+Avans incasat
+C.M. din C.C.I
+Retineri
+Sp. permanente/Alte sporuri
+SALARIU BRUT REALIZAT
+REST DE PLATA(LEI)
+FLUTURAS DE LICHIDARE (LEI)
+SOFER DE AUTOCAMION
+DIURNA (EUR)
+Ianuarie
+Februarie
+Martie
+Aprilie
+Mai
+Iunie
+Iulie
+August
+Septmbrie
+Octombrie
+Noiembrie
+Decembrie
