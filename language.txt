@@ -7,7 +7,7 @@ Somaj
 Salariu aferent timpului lucrat
 Retineri
 Sanatate
-Concediu fara plata/Absente
+Concediu fara plata(zile)/Absente(ore)
 Depasiri plan net/brut
 Deducere personala
 Ore suplimentare
@@ -18,9 +18,9 @@ Impozit pe salariu
 Ore de noapte
 Tichete masa/Stimulente
 SALARIU NET
-C.M. din fd salarii
+C.M. din fd salarii(zile)
 Avans incasat
-C.M. din C.C.I
+C.M. din C.C.I(zile)
 Retineri
 Sp. permanente/Alte sporuri
 SALARIU BRUT REALIZAT
