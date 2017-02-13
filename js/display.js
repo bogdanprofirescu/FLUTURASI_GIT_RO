@@ -16,6 +16,7 @@ var targetFile;
 var luna_selected=false;
 var limba_selected=false;
 var index_luna;
+var no_of_containers;
 
 
 $(document).ready(function()
@@ -59,10 +60,7 @@ function HideIntro()
    AppendTemplate();
    IdentifyColumns(parsed_data);
    PrintData();
-
  }
-
-
 
  //this function is called immediatelly after loading the <iframe> and loads names of categories
  function readLanguage() {
@@ -106,16 +104,36 @@ function AppendTemplate()
 {
   var template = $('.container');
   $('.container').show();
-    var tag_luna=document.getElementsByClassName('month')[0];
+  var tag_luna=document.getElementsByClassName('month')[0];
   tag_luna.innerHTML=tableLine[index_luna];
+  // document.getElementsByClassName('container')[0].id="1";
+  //  alert($('#1')[0].id);
+  //aici ar trebui sa adaug un nr la container-e containerul 1
 };
 
 function PrintData()
 {
   //add the templates
   var template = $('.container');
-  for(i=1;i<data.length-2;i++) {
-    template.clone().insertAfter(template); }
+  for(var i=1;i<data.length-2;i++) {
+    template.clone().insertAfter(template);
+        }//aici ar trebui sa adaug un nr la container
+
+//add the containers ids for printing identification
+var containerIDstore=document.getElementsByClassName('container');
+no_of_containers=containerIDstore.length;
+var printIDstore=document.getElementsByClassName('print_btn1');
+var marcatIDstore=document.getElementsByClassName('marcat');
+
+var func_name="text";
+for(var j=0;j<containerIDstore.length;j++)
+{ //set unique IDs to each DIV and unique print calls for each DIV
+  containerIDstore[j].id=j;
+  marcatIDstore[j].id=j+"m";console.log(marcatIDstore[j].id);
+  func_name="javascript: PrintDiv("+j+");";
+  printIDstore[j].setAttribute( "onclick", func_name);
+ }
+
 
 //get elements
   var name_element=document.getElementsByClassName('name');
@@ -269,13 +287,22 @@ function clicklink(luna)
 //
 // }
 
-function Print() {
-// var prtContent = document.getElementById("your div id");
-// var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
-// WinPrint.document.write(prtContent.innerHTML);
-// WinPrint.document.close();
-// WinPrint.focus();
-// WinPrint.print();
-// WinPrint.close();
+function PrintDiv(divName) {
+for (var i=0;i<no_of_containers;i++)
+    if (divName!=i) document.getElementById(i).style.display="none";
 window.print();
+for (var i=0;i<no_of_containers;i++)
+    if (divName!=i) document.getElementById(i).style.display="initial";
+}
+
+function PrintMarcati()
+{
+  var id_marcaje;
+  for (var i=0;i<no_of_containers;i++)
+      { id_marcaje=i+"m";
+      if (document.getElementById(id_marcaje).checked===false) document.getElementById(i).style.display="none";
+    }
+  window.print();
+    for (var i=0;i<no_of_containers;i++) document.getElementById(i).style.display="initial";
+
 }

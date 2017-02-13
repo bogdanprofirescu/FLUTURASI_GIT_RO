@@ -14,8 +14,8 @@ body {
   margin-left: auto !important;
   margin-right: auto !important;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  background-color: #779dca;
+  font-size: 12px;
+  /*background-color: #779dca;*/
   overflow: scroll;
 }
 
@@ -53,7 +53,7 @@ display: none;
   border-style: inset;
   border-width: thin;
 }
-.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12
  {
      padding-right: 2px !important;
 }
@@ -122,61 +122,64 @@ display: none;
 
 
 @media print {
-   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+   .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
         float: left;
    }
-   .col-md-12 {
+   .col-xs-12 {
         width: 100%;
    }
-   .col-md-11 {
+   .col-xs-11 {
         width: 91.66666667%;
    }
-   .col-md-10 {
+   .col-xs-10 {
         width: 83.33333333%;
    }
-   .col-md-9 {
+   .col-xs-9 {
         width: 75%;
    }
-   .col-md-8 {
+   .col-xs-8 {
         width: 66.66666667%;
    }
-   .col-md-7 {
+   .col-xs-7 {
         width: 58.33333333%;
    }
-   .col-md-6 {
+   .col-xs-6 {
         width: 50%;
    }
-   .col-md-5 {
+   .col-xs-5 {
         width: 41.66666667%;
    }
-   .col-md-4 {
+   .col-xs-4 {
         width: 33.33333333%;
    }
-   .col-md-3 {
+   .col-xs-3 {
         width: 25%;
    }
-   .col-md-2 {
+   .col-xs-2 {
         width: 16.66666667%;
    }
-   .col-md-1 {
+   .col-xs-1 {
         width: 8.33333333%;
    }
 
    p,div {
     page-break-inside: avoid;
     page-break-after: avoid;
-    page-break-bef: avoid;}
+    page-break-before: avoid;}
 
 .print_btn {
       display: none;
     }
-    .container
+.print_btn1 {
+          display: none;
+        }
+
+  .container
     {
-      page-break-bef: always;
+      page-break-before: always;
       page-break-after: always;
     }
 }
-
 
 </style>
 <body>
@@ -235,129 +238,132 @@ display: none;
 <!--  first dataset-->
 <div class="container printableArea">
   <div class="row companie">
-    <div class="col-md-12 company">JAN DE RIJK LOGISTICS ROMANIA SRL</div>
+    <div class="col-xs-12 company">JAN DE RIJK LOGISTICS ROMANIA SRL</div>
   </div>
   <div class="row cap_tabel">
-    <div class="col-md-3 doc_title"> FLUTURAS DE LICHIDARE</div>
-    <div class="col-md-2 month"> FEBRUARIE</div>
-    <div class="col-md-1 year"> 2017 </div>
-    <div class="col-md-2 name"> IONEL POPESCU </div>
-    <div class="col-md-3 job_title"> SOFER DE AUTOCAMION </div>
+    <div class="col-xs-3 doc_title"> FLUTURAS DE LICHIDARE</div>
+    <div class="col-xs-2 month"> FEBRUARIE</div>
+    <div class="col-xs-1 year"> 2017 </div>
+    <div class="col-xs-2 name"> IONEL POPESCU </div>
+    <div class="col-xs-3 job_title"> SOFER DE AUTOCAMION </div>
   </div>
   <div class="row">
-    <div class="col-md-12">&nbsp</div>
+    <div class="col-xs-12">&nbsp</div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-3 r1c1">Salariu incadrare</div>
-    <div class="col-md-1 r1c2"></div>
-    <div class="col-md-1 r1c3">2000</div>
-    <div class="col-md-2 r1c4">Concediu odihna</div>
-    <div class="col-md-1 r1c5"></div>
-    <div class="col-md-1 r1c6">0</div>
-    <div class="col-md-2 r1c7">CAS</div>
-    <div class="col-md-1 r1c8">210</div>
+    <div class="col-xs-3 r1c1">Salariu incadrare</div>
+    <div class="col-xs-1 r1c2"></div>
+    <div class="col-xs-1 r1c3">2000</div>
+    <div class="col-xs-2 r1c4">Concediu odihna</div>
+    <div class="col-xs-1 r1c5"></div>
+    <div class="col-xs-1 r1c6">0</div>
+    <div class="col-xs-2 r1c7">CAS</div>
+    <div class="col-xs-1 r1c8">210</div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-3 r2c1"> lucrate/salariu orar</div>
-    <div class="col-md-1 r2c2">160/</div>
-    <div class="col-md-1 r2c3">12.50</div>
-    <div class="col-md-2"><strong class="r2c4">Salariu realizat</strong></div>
-    <div class="col-md-1 r2c5"></div>
-    <div class="col-md-1 r2c6"><strong class="r2c6">2000</strong></div>
-    <div class="col-md-2 r2c7">Somaj</div>
-    <div class="col-md-1 r2c8">10</div>
+    <div class="col-xs-3 r2c1"> lucrate/salariu orar</div>
+    <div class="col-xs-1 r2c2">160/</div>
+    <div class="col-xs-1 r2c3">12.50</div>
+    <div class="col-xs-2"><strong class="r2c4">Salariu realizat</strong></div>
+    <div class="col-xs-1 r2c5"></div>
+    <div class="col-xs-1 r2c6"><strong class="r2c6">2000</strong></div>
+    <div class="col-xs-2 r2c7">Somaj</div>
+    <div class="col-xs-1 r2c8">10</div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-3 r3c1">Salariu aferent timpului lucrat</div>
-    <div class="col-md-1 r3c2">/</div>
-    <div class="col-md-1 r3c3">2000</div>
-    <div class="col-md-2 r3c4">Retineri</div>
-    <div class="col-md-1 r3c5"></div>
-    <div class="col-md-1 r3c6">0</div>
-    <div class="col-md-2 r3c7">Sanatate</div>
-    <div class="col-md-1 r3c8">110</div>
+    <div class="col-xs-3 r3c1">Salariu aferent timpului lucrat</div>
+    <div class="col-xs-1 r3c2">/</div>
+    <div class="col-xs-1 r3c3">2000</div>
+    <div class="col-xs-2 r3c4">Retineri</div>
+    <div class="col-xs-1 r3c5"></div>
+    <div class="col-xs-1 r3c6">0</div>
+    <div class="col-xs-2 r3c7">Sanatate</div>
+    <div class="col-xs-1 r3c8">110</div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-3 r4c1">Concediu fara plata/Absente</div>
-    <div class="col-md-1 r4c2">0 </div>
-    <div class="col-md-1 r4c3">0 </div>
-    <div class="col-md-2 r4c4">Depasiri plan net/brut</div>
-    <div class="col-md-1 r4c5">0/</div>
-    <div class="col-md-1 r4c6">0</div>
-    <div class="col-md-2 r4c7">Deducere personala</div>
-    <div class="col-md-1 r4c8">200</div>
+    <div class="col-xs-3 r4c1">Concediu fara plata/Absente</div>
+    <div class="col-xs-1 r4c2">0 </div>
+    <div class="col-xs-1 r4c3">0 </div>
+    <div class="col-xs-2 r4c4">Depasiri plan net/brut</div>
+    <div class="col-xs-1 r4c5">0/</div>
+    <div class="col-xs-1 r4c6">0</div>
+    <div class="col-xs-2 r4c7">Deducere personala</div>
+    <div class="col-xs-1 r4c8">200</div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-3 r5c1"> suplimentare</div>
-    <div class="col-md-1 r5c2">0 /</div>
-    <div class="col-md-1 r5c3">0</div>
-    <div class="col-md-2 r5c4">Alte venituri</div>
-    <div class="col-md-1 r5c5"></div>
-    <div class="col-md-1 r5c6">0</div>
-    <div class="col-md-2 r5c7">Venit net</div>
-    <div class="col-md-1 r5c8">1670</div>
+    <div class="col-xs-3 r5c1"> suplimentare</div>
+    <div class="col-xs-1 r5c2">0 /</div>
+    <div class="col-xs-1 r5c3">0</div>
+    <div class="col-xs-2 r5c4">Alte venituri</div>
+    <div class="col-xs-1 r5c5"></div>
+    <div class="col-xs-1 r5c6">0</div>
+    <div class="col-xs-2 r5c7">Venit net</div>
+    <div class="col-xs-1 r5c8">1670</div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-3 r6c1"> suplimentare</div>
-    <div class="col-md-1 r6c2">0 /</div>
-    <div class="col-md-1 r6c3">0</div>
-    <div class="col-md-2 r6c4"></div>
-    <div class="col-md-1 r6c5"></div>
-    <div class="col-md-1 r6c6"></div>
-    <div class="col-md-2 r6c7">Impozit pe salariu</div>
-    <div class="col-md-1 r6c8">235</div>
+    <div class="col-xs-3 r6c1"> suplimentare</div>
+    <div class="col-xs-1 r6c2">0 /</div>
+    <div class="col-xs-1 r6c3">0</div>
+    <div class="col-xs-2 r6c4"></div>
+    <div class="col-xs-1 r6c5"></div>
+    <div class="col-xs-1 r6c6"></div>
+    <div class="col-xs-2 r6c7">Impozit pe salariu</div>
+    <div class="col-xs-1 r6c8">235</div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-3 r7c1"> de noapte</div>
-    <div class="col-md-1 r7c2">0 /</div>
-    <div class="col-md-1 r7c3">0</div>
-    <div class="col-md-2 r7c4">Tichete masa/Stimulente</div>
-    <div class="col-md-1 r7c5">0.00/</div>
-    <div class="col-md-1 r7c6">0</div>
-    <div class="col-md-2"><strong class="r7c7">SALARIU NET</strong></div>
-    <div class="col-md-1"><strong class="r7c8">1435</strong></div>
+    <div class="col-xs-3 r7c1"> de noapte</div>
+    <div class="col-xs-1 r7c2">0 /</div>
+    <div class="col-xs-1 r7c3">0</div>
+    <div class="col-xs-2 r7c4">Tichete masa/Stimulente</div>
+    <div class="col-xs-1 r7c5">0.00/</div>
+    <div class="col-xs-1 r7c6">0</div>
+    <div class="col-xs-2"><strong class="r7c7">SALARIU NET</strong></div>
+    <div class="col-xs-1"><strong class="r7c8">1435</strong></div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-3 r8c1"></div>
-    <div class="col-md-1 r8c2"></div>
-    <div class="col-md-1 r8c3"></div>
-    <div class="col-md-2 r8c4">C.M. din fd salarii</div>
-    <div class="col-md-1 r8c5"></div>
-    <div class="col-md-1 r8c6">0</div>
-    <div class="col-md-2 r8c7">Avans incasat</div>
-    <div class="col-md-1 r8c8">0</div>
+    <div class="col-xs-3 r8c1"></div>
+    <div class="col-xs-1 r8c2"></div>
+    <div class="col-xs-1 r8c3"></div>
+    <div class="col-xs-2 r8c4">C.M. din fd salarii</div>
+    <div class="col-xs-1 r8c5"></div>
+    <div class="col-xs-1 r8c6">0</div>
+    <div class="col-xs-2 r8c7">Avans incasat</div>
+    <div class="col-xs-1 r8c8">0</div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-3 r9c1"></div>
-    <div class="col-md-1 r9c2"></div>
-    <div class="col-md-1 r9c3"></div>
-    <div class="col-md-2 r9c4">C.M. din C.C.I.</div>
-    <div class="col-md-1 r9c5"></div>
-    <div class="col-md-1 r9c6">0</div>
-    <div class="col-md-2 r9c7">Retineri</div>
-    <div class="col-md-1 r9c8">0</div>
+    <div class="col-xs-3 r9c1"></div>
+    <div class="col-xs-1 r9c2"></div>
+    <div class="col-xs-1 r9c3"></div>
+    <div class="col-xs-2 r9c4">C.M. din C.C.I.</div>
+    <div class="col-xs-1 r9c5"></div>
+    <div class="col-xs-1 r9c6">0</div>
+    <div class="col-xs-2 r9c7">Retineri</div>
+    <div class="col-xs-1 r9c8">0</div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-3 r10c1">Sp. permanente/Alte sporuri</div>
-    <div class="col-md-1 r10c2">0/</div>
-    <div class="col-md-1 r10c3">0</div>
-    <div class="col-md-2"><strong class="r10c4">SALARIU BRUT REALIZAT</strong></div>
-    <div class="col-md-1 r10c5"></div>
-    <div class="col-md-1"><strong class="r10c6">2000</strong></div>
-    <div class="col-md-2"><strong class="r10c7">REST DE PLATA</strong></div>
-    <div class="col-md-1"><strong  class="r10c8">1435</strong></div>
+    <div class="col-xs-3 r10c1">Sp. permanente/Alte sporuri</div>
+    <div class="col-xs-1 r10c2">0/</div>
+    <div class="col-xs-1 r10c3">0</div>
+    <div class="col-xs-2"><strong class="r10c4">SALARIU BRUT REALIZAT</strong></div>
+    <div class="col-xs-1 r10c5"></div>
+    <div class="col-xs-1"><strong class="r10c6">2000</strong></div>
+    <div class="col-xs-2"><strong class="r10c7">REST DE PLATA</strong></div>
+    <div class="col-xs-1"><strong  class="r10c8">1435</strong></div>
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-9"></div>
-    <div class="col-md-2"><strong class="diurna"></strong></div>
-    <div class="col-md-1"><input type="text" class="valoare" name="diurna_name" value=""></div>
-    <div class="col-md-10"><p>.....................................................................</p></div>
-    <!-- <div class="col-md-2"><p>SEMNATURA</p></div> -->
+    <div class="col-xs-9"></div>
+    <div class="col-xs-2"><strong class="diurna"></strong></div>
+    <div class="col-xs-1"><input type="text" class="valoare" name="diurna_name" value=""></div>
+    <div class="col-xs-10"><p>.....................................................................</p></div>
+    <!-- <div class="col-xs-2"><p>SEMNATURA</p></div> -->
   </div>
   <div class="row rand_tabel">
-    <div class="col-md-2"> <button class="print_btn" onclick="Print()">Print all</button></div>
-      <div class="col-md-1"><input class="print_btn" type="button" value="Back to menu" onClick="window.location.reload()"></div>
-    </div>
+    <div class="col-xs-2"> <button class="print_btn1" onclick="Print()">Tipareste Fluturas</button></div>
+    <div class="col-xs-2"> <button class="print_marcati" onclick="PrintMarcati()">Tipareste Fluturas Marcati</button></div>
+      <div class="col-xs-2"> <input class="marcat" type="checkbox" name="vehicle" value="Bike">Marcat pentru tiparit<br></div>
+    <div class="col-xs-1"><input class="print_btn" type="button" value="Meniu principal" onClick="window.location.reload()"></div>
+
+  </div>
   </div>
 
 
