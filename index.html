@@ -6,6 +6,7 @@
 
   <title>FLUTURAS DE LICHIDARE / LOHNZETTEL ABRECHNUNG</title>
   <meta name="description" content="fluturasi">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
 </head>
 <style>
@@ -14,7 +15,7 @@ body {
   margin-left: auto !important;
   margin-right: auto !important;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   /*background-color: #779dca;*/
   overflow: scroll;
 }
@@ -39,7 +40,7 @@ body {
   display: inline;
 }
 .container {
-font-size: 12px;
+font-size: 14px;
 padding-top: 30px;
 display: none;
 }
@@ -55,7 +56,7 @@ display: none;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12
  {
-     padding-right: 2px !important;
+     /*padding-right: 2px !important;*/
 }
 
 .cap_tabel
@@ -130,7 +131,8 @@ display: none;
 
 @media print {
   .page-break	{ display: block; page-break-before: always; }
-   .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+
+   /*.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
         float: left;
    }
    .col-xs-12 {
@@ -168,7 +170,7 @@ display: none;
    }
    .col-xs-1 {
         width: 8.33333333%;
-   }
+   }*/
 
    /*.container {
     page-break-inside: avoid !important;
@@ -183,7 +185,7 @@ display: none;
 }
 
 .container {
-font-size: 12px;
+font-size: 15px;
 }
 /*.container
     {
@@ -194,7 +196,8 @@ font-size: 12px;
 /*asta ar trebui sa previna print-ul cu link-ul paginii*/
 @page {
         size: auto;   /* auto is the initial value */
-        margin : 20mm 20mm 0mm 20mm;  /* this affects the margin in the printer settings */
+        margin: 15mm 15mm 0mm 15mm;  /* this affects the margin in the printer settings */
+        /*top ..right .bottom left */
         /*sus am scos marginea de jos a paginilor ca sa nu apara link-ul*/
     }
 }
@@ -387,9 +390,8 @@ font-size: 12px;
     <div class="col-xs-1"><input class="print_btn" type="button" value="Meniu principal" onClick="window.location.reload()"></div>
   </div>
   <!-- test pt page break -->
-  <div class="page-break"></div>
   </div>
-
+  <div class="page-break"></div>
 
 </div>
 <script src="js/display.js"></script>

@@ -114,10 +114,11 @@ function AppendTemplate()
 function PrintData()
 {
   //add the templates
-  var template = $('.container');
+  var template = $('#mega_container');
   for(var i=1;i<data.length-2;i++) {
     template.clone().insertAfter(template);
-        }//aici ar trebui sa adaug un nr la container
+    // template.html('<div class="page-break"></div>');
+        }
 
 //add the containers ids for printing identification
 var containerIDstore=document.getElementsByClassName('container');
@@ -129,7 +130,8 @@ var func_name="text";
 for(var j=0;j<containerIDstore.length;j++)
 { //set unique IDs to each DIV and unique print calls for each DIV
   containerIDstore[j].id=j;
-  marcatIDstore[j].id=j+"m";console.log(marcatIDstore[j].id);
+  marcatIDstore[j].id=j+"m";
+  // console.log(marcatIDstore[j].id);
   func_name="javascript: PrintDiv("+j+");";
   printIDstore[j].setAttribute( "onclick", func_name);
  }
@@ -292,9 +294,7 @@ for (var i=0;i<no_of_containers;i++)
     if (divName!=i) document.getElementById(i).style.display="none";
 window.print();
 for (var i=0;i<no_of_containers;i++)
-    if (divName!=i)   { document.getElementById(i).style.display="unset";
-      document.getElementById(i).style.fontSize="12px";
-          }
+    if (divName!=i) document.getElementById(i).style.display="block";
 }
 
 function PrintMarcati()
@@ -306,8 +306,7 @@ function PrintMarcati()
     }
   window.print();
     for (var i=0;i<no_of_containers;i++)
-                { document.getElementById(i).style.display="unset";
-                document.getElementById(i).style.fontSize="12px";
+                { document.getElementById(i).style.display="block";
               }
 
 }
