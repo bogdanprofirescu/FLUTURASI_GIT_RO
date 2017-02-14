@@ -1,14 +1,14 @@
 Einstellungslohn
 Erholungsurlaub
 Sozialversicherung
-Geleistete Stunden/Stundenlohn
+Geleistete Stunden/ Stundenlohn
 Erzielter Lohn
 Arbeitslosenunterst
 Lohn entsprechend der geleisteten Zeit
 Ruckhaltungen
 Krankenversicherung
 Unbezahlter Urlaub(Tage)/ Abwesenheit(Stunden)
-Planuberschreitungen netto/Brutto
+Planuberschreitungen netto/ Brutto
 Personliche Abzuge
 Uberstunden
 Andere Einkommen
@@ -16,13 +16,13 @@ Nettoeinkommen
 Uberstunden
 Lohnsteuer
 Nachtstunden
-Speisekarten/Forderungen
+Speisekarten/ Forderungen
 NETTOLOHN
 Krankenurlaub aus Lohnfonds(Tage)
 Vorschuuss
 Krankenurlaub aus C.C.I(Tage)
 Ruckhaltungen
-Standige Zuschlage/Andere Zuschlage
+Standige Zuschlage /Andere Zuschlage
 GELEISTETER BRUTTOLOHN
 ZAHLUNGREST(LEI)
 LOHNZETTEL ABRECHNUNG (LEI)
