@@ -23,13 +23,13 @@ body {
 #start_message {
    position:absolute;
    left:50%;
-   top:40%;
+   top:30%;
    width:400px;
-   height:230px;
+   height:280px;
    margin-left:-200px; /* -1/2 width */
    margin-top:-50px; /* -1/2 height */
-
-    background-color: #cde364;
+   font-size: 13px;
+    background-color: #dbedc7;
     padding: 5px;
     border: 1px dashed #ddd;
 	  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
@@ -52,7 +52,7 @@ padding-top: 80px;
 display: none;
 }
 
-#myframe {
+.myframe {
   display: none;
 }
 
@@ -217,10 +217,8 @@ font-size: 14px;
 
 </style>
 <body>
-  <!-- <iframe id='myframe' src = 'languageGER.txt' scrolling="yes"> </iframe> -->
-  <script src="js/papaparse.min.js"></script>
-  <!-- <script   src="https://code.jquery.com/jquery-2.1.1.min.js"  integrity="sha256-h0cGsrExGgcZtSZ/fRz4AwV+Nn6Urh/3v3jFRQ0w9dQ="  crossorigin="anonymous"></script> -->
-  <script
+    <script src="js/papaparse.min.js"></script>
+    <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
@@ -229,7 +227,7 @@ font-size: 14px;
 
 
 <div id="start_message">
-      <p id="initial_text">Adaugati fisierul cu statele de plata din SAGA in format "*.CSV" si selectati luna</p>
+      <p id="initial_text">Adaugati fisierul cu statele de plata din SAGA in format "*.CSV" (inclusiv cu coloana "diurna"), selectati luna si limba raportului</p>
       <input type="file" id="csv-file" name="files">
 
       <div class="dropdown">
@@ -250,10 +248,10 @@ font-size: 14px;
         </div>
       </div>
       <p id="luna_aleasa"></p>
-      <!-- <form>
+      <form>
         <input type="radio" name="limba" id="germana" checked="">Germana<br>
         <input type="radio" name="limba" id="romana">Romana
-      </form> -->
+      </form>
       <p id="empty1"></p>
       <p id="empty2"></p>
       <button id="button_go" type="button" onclick="go_process('ger')">Genereaza fluturasi</button>
@@ -406,6 +404,9 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
 
 </div>
 <script src="js/display.js"></script>
-<iframe id='myframe' src = 'languageGER.txt' onload='readLanguage()'> </iframe>
+<iframe class='myframe' id='myframeGER' src = 'languageGER.txt'> </iframe>
+<iframe class='myframe' id='myframeRO' src = 'language.txt'> </iframe>
+<!-- <iframe class='myframe' id='myframeGER' src = 'languageGER.txt' onload='readLanguage()'> </iframe>
+<iframe class='myframe' id='myframeRO' src = 'language.txt' onload='readLanguage()'> </iframe> -->
 </body>
 </html>

@@ -30,6 +30,8 @@ $(document).ready(function()
 
  function go_process(){
 
+
+readLanguage();
 if (luna_selected) {
        try {
      Papa.parse(targetFile, { complete: function(results) {  data=results.data; ProgramStart(results); } });
@@ -43,9 +45,6 @@ if (luna_selected) {
 
 function HideIntro()
 {
-  // var x = document.getElementById("germana").checked;
-  // if (x=="true") $(document.body).append("<iframe class='myframe' src = 'languageGER.txt' onload='readLanguage()'> </iframe>")
-  // else $(document.body).append("<iframe class='myframe' src = 'language.txt' onload='readLanguage()'> </iframe>");
 
   var tag_luna=document.getElementsByClassName('month')[0];
   tag_luna.innerHTML=tableLine[index_luna];
@@ -56,6 +55,7 @@ function HideIntro()
 
  function ProgramStart(parsed_data)
  {
+
    HideIntro();
    AppendTemplate();
    IdentifyColumns(parsed_data);
@@ -64,9 +64,14 @@ function HideIntro()
 
  //this function is called immediatelly after loading the <iframe> and loads names of categories
  function readLanguage() {
+ var names;
+   if ((document.getElementById('germana').checked))
+     names=document.getElementById('myframeGER').contentDocument.body.firstChild.innerHTML;
+     else names=document.getElementById('myframeRO').contentDocument.body.firstChild.innerHTML;
 
-  var names=document.getElementById('myframe').contentDocument.body.firstChild.innerHTML;
   tableLine = names.split("\n");//tableLine is an array of category names for the template
+
+
   document.getElementsByClassName('r1c1')[0].innerHTML=tableLine[0]; //Salariu incadrare(ger)
   document.getElementsByClassName('r1c4')[0].innerHTML=tableLine[1]; //Concediu odihna(ger)
   document.getElementsByClassName('r1c7')[0].innerHTML=tableLine[2]; //CAS(ger)
