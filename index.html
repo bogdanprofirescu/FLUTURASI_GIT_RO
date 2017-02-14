@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Fluturasi</title>
+  <title>FLUTURAS DE LICHIDARE / LOHNZETTEL ABRECHNUNG</title>
   <meta name="description" content="fluturasi">
   <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
 </head>
@@ -73,6 +73,10 @@ display: none;
 .valoare {
   width: 50px;
 }
+.semnatura {
+  padding-top: 15px !important;
+
+}
 
 /* Dropdown Button */
 .dropbtn {
@@ -120,8 +124,12 @@ display: none;
 .show {display:block;}
 #button_go { display: block;}
 
+@media all {
+	.page-break	{ display: none; }
+}
 
 @media print {
+  .page-break	{ display: block; page-break-before: always; }
    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
         float: left;
    }
@@ -162,24 +170,35 @@ display: none;
         width: 8.33333333%;
    }
 
-   p,div {
-    page-break-inside: avoid;
-    page-break-after: avoid;
-    page-break-before: avoid;}
+   /*.container {
+    page-break-inside: avoid !important;
+    page-break-after: avoid !important;
+    page-break-before: avoid !important;}*/
 
-.print_btn {
+.print_btn, .print_btn1, .marcat, .print_marcati {
       display: none;
     }
-.print_btn1 {
-          display: none;
-        }
+#select {
+  display: none;
+}
 
-  .container
+.container {
+font-size: 12px;
+}
+/*.container
     {
-      page-break-before: always;
-      page-break-after: always;
+      page-break-before: always !important;
+      page-break-after: always !important;
+    }*/
+
+/*asta ar trebui sa previna print-ul cu link-ul paginii*/
+@page {
+        size: auto;   /* auto is the initial value */
+        margin : 20mm 20mm 0mm 20mm;  /* this affects the margin in the printer settings */
+        /*sus am scos marginea de jos a paginilor ca sa nu apara link-ul*/
     }
 }
+
 
 </style>
 <body>
@@ -354,16 +373,21 @@ display: none;
     <div class="col-xs-9"></div>
     <div class="col-xs-2"><strong class="diurna"></strong></div>
     <div class="col-xs-1"><input type="text" class="valoare" name="diurna_name" value=""></div>
-    <div class="col-xs-10"><p>.....................................................................</p></div>
-    <!-- <div class="col-xs-2"><p>SEMNATURA</p></div> -->
+  </div>
+  <div class="row rand_tabel">
+    <!-- <div class="col-xs-3"><p class="semantura">Unterschrift/Handtekening/Signature/Firma</p></div>
+    <div class="col-xs-9"><p class="semantura">.......................</p></div> -->
+    <div class="col-xs-3 semnatura"><i >Unterschrift/Handtekening/Signature/Firma/Semnatura</i></div>
+    <div class="col-xs-3 semnatura">&nbsp&nbsp&nbsp&nbsp.............................................</div>
   </div>
   <div class="row rand_tabel">
     <div class="col-xs-2"> <button class="print_btn1" onclick="Print()">Tipareste Fluturas</button></div>
-    <div class="col-xs-2"> <button class="print_marcati" onclick="PrintMarcati()">Tipareste Fluturas Marcati</button></div>
-      <div class="col-xs-2"> <input class="marcat" type="checkbox" name="vehicle" value="Bike">Marcat pentru tiparit<br></div>
+    <div class="col-xs-2"> <button class="print_marcati" onclick="PrintMarcati()">Tipareste Fluturasi Selectati</button></div>
+      <div class="col-xs-2" id="select"> <input class="marcat" type="checkbox" name="vehicle" value="Bike">Selectat pt. tiparit<br></div>
     <div class="col-xs-1"><input class="print_btn" type="button" value="Meniu principal" onClick="window.location.reload()"></div>
-
   </div>
+  <!-- test pt page break -->
+  <div class="page-break"></div>
   </div>
 
 

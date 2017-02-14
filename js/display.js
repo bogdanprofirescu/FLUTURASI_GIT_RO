@@ -292,7 +292,9 @@ for (var i=0;i<no_of_containers;i++)
     if (divName!=i) document.getElementById(i).style.display="none";
 window.print();
 for (var i=0;i<no_of_containers;i++)
-    if (divName!=i) document.getElementById(i).style.display="initial";
+    if (divName!=i)   { document.getElementById(i).style.display="unset";
+      document.getElementById(i).style.fontSize="12px";
+          }
 }
 
 function PrintMarcati()
@@ -303,6 +305,9 @@ function PrintMarcati()
       if (document.getElementById(id_marcaje).checked===false) document.getElementById(i).style.display="none";
     }
   window.print();
-    for (var i=0;i<no_of_containers;i++) document.getElementById(i).style.display="initial";
+    for (var i=0;i<no_of_containers;i++)
+                { document.getElementById(i).style.display="unset";
+                document.getElementById(i).style.fontSize="12px";
+              }
 
 }
