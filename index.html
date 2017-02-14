@@ -41,7 +41,7 @@ body {
 }
 .container {
 font-size: 14px;
-padding-top: 30px;
+padding-top: 80px;
 display: none;
 }
 
@@ -123,7 +123,11 @@ display: none;
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
-#button_go { display: block;}
+#button_go {
+  display: block;
+  float: right;
+
+}
 
 @media all {
 	.page-break	{ display: none; }
@@ -376,11 +380,9 @@ font-size: 14px;
   <div class="row rand_tabel">
     <div class="col-xs-9"></div>
     <div class="col-xs-2"><strong class="diurna"></strong></div>
-    <div class="col-xs-1"><input type="text" class="valoare" name="diurna_name" value=""></div>
+    <div class="col-xs-1"> <strong class="valoare_diurna"></strong></div>
   </div>
   <div class="row rand_tabel">
-    <!-- <div class="col-xs-3"><p class="semantura">Unterschrift/Handtekening/Signature/Firma</p></div>
-    <div class="col-xs-9"><p class="semantura">.......................</p></div> -->
     <div class="col-xs-3 semnatura"><i >Unterschrift/Handtekening/Signature/Firma/Semnatura</i></div>
     <div class="col-xs-3 semnatura">&nbsp&nbsp&nbsp&nbsp.............................................</div>
   </div>

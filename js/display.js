@@ -8,7 +8,7 @@ var indexr7c1, indexr7c2, indexr7c3, indexr7c4, indexr7c5, indexr7c6, indexr7c7,
 var indexr8c1, indexr8c2, indexr8c3, indexr8c4, indexr8c5, indexr8c6, indexr8c7, indexr8c8;
 var indexr9c1, indexr9c2, indexr9c3, indexr9c4, indexr9c5, indexr9c6, indexr9c7, indexr9c8;
 var index10c1, index10c2, index10c3, index10c4, index10c5, index10c6, index10c7, index10c8;
-var index_nume, index_prenume;
+var index_nume, index_prenume, index_diurna;
 
 var data;
 var tableLine;
@@ -139,6 +139,7 @@ for(var j=0;j<containerIDstore.length;j++)
 
 //get elements
   var name_element=document.getElementsByClassName('name');
+  var valoare_diurna_element=document.getElementsByClassName('valoare_diurna');
   var r1c3_element=document.getElementsByClassName('r1c3');
   var r10c3_elment=document.getElementsByClassName('r10c3');
   var r3c6_elment=document.getElementsByClassName('r3c6');
@@ -186,6 +187,7 @@ for(i=1;i<data.length-1;i++)
   r8c8_element[i-1].innerHTML=data[i][index_r8c8];//avans
   r9c8_element[i-1].innerHTML=data[i][index_r9c8];//retineri
   r10c8_element[i-1].innerHTML=data[i][index_r10c8];//rest_plata
+  valoare_diurna_element[i-1].innerHTML=data[i][index_diurna];//diurna
 }
 
 }
@@ -233,6 +235,7 @@ for(i=1;i<data.length-1;i++)
             case "avans": { index_r8c8=m; } break;
             case "retineri": { index_r9c8=m; } break;
             case "rest_plata": { index_r10c8=m; } break;
+            case "diurna": {index_diurna=m;} break;
       };
 
 };
