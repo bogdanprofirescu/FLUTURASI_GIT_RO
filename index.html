@@ -16,7 +16,8 @@ body {
   margin-right: auto !important;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
-  /*background-color: #779dca;*/
+  background: url(butterfly1.jpg) blue;
+   background-position: 10px 35px;
   overflow: scroll;
 }
 
@@ -262,21 +263,21 @@ font-size: 14px;
       <p id="luna_aleasa"></p>
       <p></p>
       <form>
+        <input type="radio" name="an" id="2017" checked="">2017
+        <input type="radio" name="an" id="2018">2018
+        <input type="radio" name="an" id="2019">2019
+      </form>
+      <form>
         <input type="radio" name="limba" id="germana" checked="">Germana
         <input type="radio" name="limba" id="italiana">Italiana
         <input type="radio" name="limba" id="olandeza">Olandeza
         <input type="radio" name="limba" id="romana">Romana
       </form>
-      <form>
-        <input type="radio" name="an" id="2017" checked="">2017
-        <input type="radio" name="an" id="2018">2018
-        <input type="radio" name="an" id="2019">2019
-      </form>
       <p id="empty1"></p>
       <p id="empty2"></p>
       <button id="button_go" type="button" onclick="go_process('ger')">Genereaza fluturasi</button>
 <p id="atentie"><strong id="atentie_cuvant">ATENTIE!</strong><br> Pentru a tipari fara erori folositi browser-ul Google Chrome v56+ (recomandat) sau Opera(v43+).<br>
-Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Internet Explorer NU este recomandat.</p>
+Din Mozilla Firefox(v48+) se poate tipari numai via Microsoft Print to PDF.<br>Internet Explorer NU este recomandat.</p>
   </div>
 
 </div>
@@ -290,6 +291,10 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
 <div id="mega_container">
 <!--  first dataset-->
 <div class="container printableArea">
+  <div class="row">
+    <div class="col-xs-10">&nbsp</div>
+    <div class="col-xs-2"><input class="print_btn" type="button" value="Inapoi La Meniul Principal&nbsp" onClick="window.location.reload()"></div>
+  </div>
   <div class="row companie">
     <div class="col-xs-12 company">JAN DE RIJK LOGISTICS ROMANIA SRL</div>
   </div>
@@ -301,7 +306,7 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
     <div class="col-xs-3 job_title"> SOFER DE AUTOCAMION </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">&nbsp</div>
+    <div class="col-xs-11">&nbsp</div>
   </div>
   <div class="row rand_tabel">
     <div class="col-xs-3 r1c1">Salariu incadrare</div>
@@ -414,11 +419,10 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
     <div class="col-xs-3 semnatura">.............................................</div>
   </div>
   <div class="row rand_tabel" id="print_btns_text">
-    <div class="col-xs-1"> <button class="print_marcati" onclick="PrintTot()">Tipareste tot</button></div>
+    <div class="col-xs-1" id="select"> <input class="marcat" type="checkbox" name="selectati" value="">Selectat pt. tiparit<br></div>
+    <div class="col-xs-1"> <button class="print_marcati" onclick="PrintMarcati()">Tipareste Selectie</button></div>
     <div class="col-xs-1"> <button class="print_btn1" onclick="Print()">Tipareste Fluturas</button></div>
-    <div class="col-xs-1"> <button class="print_marcati" onclick="PrintMarcati()">Tipareste Selectati</button></div>
-      <div class="col-xs-1" id="select"> <input class="marcat" type="checkbox" name="selectati" value="">Selectat pt. tiparit<br></div>
-    <div class="col-xs-1"><input class="print_btn" type="button" value="Meniu principal" onClick="window.location.reload()"></div>
+    <div class="col-xs-2"> <button class="print_marcati" onclick="PrintTot()">Tipareste Toti Fluturasii</button></div>
   </div>
   <!-- test pt page break -->
   </div>

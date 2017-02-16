@@ -37,10 +37,10 @@ if (luna_selected) {
          }
    catch(err) {
       //  alert(err.message+"\n \n Adaugati un fisier cu formatul corect daca nu ati facut asta deja.");
-       alert("\n \n Adaugati un fisier cu formatul corect daca nu ati facut asta deja.");
+       alert("\n \n Adaugati un fisier cu formatul corect.");
 
    }}
-   else alert("Trebuie sa selectati o luna.");
+   else alert("Trebuie sa:\n 1)ADAUGATI UN FISIER IN FORMATUL INDICAT si  \n\n 2) SA SELECTATI O LUNA.");
 
 }
 
@@ -78,7 +78,7 @@ function setYear()
    if ((document.getElementById('germana').checked)) names=document.getElementById('myframeGER').contentDocument.body.firstChild.innerHTML;
    if ((document.getElementById('romana').checked)) names=document.getElementById('myframeRO').contentDocument.body.firstChild.innerHTML;
    if ((document.getElementById('italiana').checked)) names=document.getElementById('myframeIT').contentDocument.body.firstChild.innerHTML;
-  if ((document.getElementById('olandeza').checked)) names=document.getElementById('myframeDU').contentDocument.body.firstChild.innerHTML;  
+  if ((document.getElementById('olandeza').checked)) names=document.getElementById('myframeDU').contentDocument.body.firstChild.innerHTML;
 
 
   tableLine = names.split("\n");//tableLine is an array of category names for the template
