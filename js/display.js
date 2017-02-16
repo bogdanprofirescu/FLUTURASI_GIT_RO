@@ -30,7 +30,7 @@ $(document).ready(function()
 
  function go_process(){
 
-
+document.body.style.background="white";
 if (luna_selected) {
        try {
      Papa.parse(targetFile, { complete: function(results) {  data=results.data; ProgramStart(results); } });
