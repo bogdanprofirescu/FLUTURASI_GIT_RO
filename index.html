@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>FLUTURAS DE LICHIDARE / LOHNZETTEL ABRECHNUNG</title>
+  <title>LOHNZETTEL ABRECHNUNG/BUSTA PAGA DI LIQUIDAZIONE GENNAIO</title>
   <meta name="description" content="fluturasi">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
@@ -96,8 +96,10 @@ display: none;
     color: white;
     width:85px;
     height: 24px;
-    padding: 5px;
-    font-size: 12px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-top: 2px;
+    font-size: 13px;
     color:black;
     border: 0.25px solid grey;
     /*border-color: black;*/
@@ -237,7 +239,7 @@ font-size: 14px;
 
 
 <div id="start_message">
-      <p id="initial_text">Adaugati fisierul cu statele de plata din SAGA in format "*.CSV" (inclusiv cu coloana "diurna"), selectati luna si limba raportului</p>
+      <p id="initial_text">Adaugati fisierul cu statele de plata din SAGA in format "*.CSV" <u>(inclusiv cu coloana "diurna")</u>, selectati luna si limba raportului</p>
       <input type="file" id="csv-file" name="files">
       <p></p>
       <div class="dropdown">
@@ -262,6 +264,7 @@ font-size: 14px;
       <form>
         <input type="radio" name="limba" id="germana" checked="">Germana
         <input type="radio" name="limba" id="italiana">Italiana
+        <input type="radio" name="limba" id="olandeza">Olandeza
         <input type="radio" name="limba" id="romana">Romana
       </form>
       <form>
@@ -426,5 +429,6 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
 <iframe class='myframe' id='myframeGER' src = 'languageGER.txt'> </iframe>
 <iframe class='myframe' id='myframeRO' src = 'languageRO.txt'> </iframe>
 <iframe class='myframe' id='myframeIT' src = 'languageIT.txt'> </iframe>
+<iframe class='myframe' id='myframeDU' src = 'languageDU.txt'> </iframe>
 </body>
 </html>
