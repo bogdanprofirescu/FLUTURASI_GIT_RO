@@ -91,18 +91,23 @@ display: none;
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: whitesmoke;
+    /*#4CAF50;*/
     color: white;
+    width:85px;
+    height: 24px;
     padding: 5px;
-    font-size: 14px;
-    border: none;
+    font-size: 12px;
+    color:black;
+    border: 0.25px solid grey;
+    /*border-color: black;*/
     cursor: pointer;
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
+/*.dropbtn:hover, .dropbtn:focus {
     background-color: #3e8e41;
-}
+}*/
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -136,9 +141,11 @@ display: none;
 #button_go {
   display: block;
   float: right;
-
 }
-
+#print_btns_text
+{
+  font-size: 12px;
+}
 @media all {
 	.page-break	{ display: none; }
 }
@@ -232,7 +239,7 @@ font-size: 14px;
 <div id="start_message">
       <p id="initial_text">Adaugati fisierul cu statele de plata din SAGA in format "*.CSV" (inclusiv cu coloana "diurna"), selectati luna si limba raportului</p>
       <input type="file" id="csv-file" name="files">
-
+      <p></p>
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Alegeti Luna</button>
         <div id="myDropdown" class="dropdown-content">
@@ -251,14 +258,21 @@ font-size: 14px;
         </div>
       </div>
       <p id="luna_aleasa"></p>
+      <p></p>
       <form>
-        <input type="radio" name="limba" id="germana" checked="">Germana<br>
+        <input type="radio" name="limba" id="germana" checked="">Germana
+        <input type="radio" name="limba" id="italiana">Italiana
         <input type="radio" name="limba" id="romana">Romana
+      </form>
+      <form>
+        <input type="radio" name="an" id="2017" checked="">2017
+        <input type="radio" name="an" id="2018">2018
+        <input type="radio" name="an" id="2019">2019
       </form>
       <p id="empty1"></p>
       <p id="empty2"></p>
       <button id="button_go" type="button" onclick="go_process('ger')">Genereaza fluturasi</button>
-<p id="atentie"><strong id="atentie_cuvant">ATENTIE!</strong><br> Pentru a tipari fara erori folositi browser-ul Google Chrome v56+ (recomandat) sau Opera.<br>
+<p id="atentie"><strong id="atentie_cuvant">ATENTIE!</strong><br> Pentru a tipari fara erori folositi browser-ul Google Chrome v56+ (recomandat) sau Opera(v43+).<br>
 Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Internet Explorer NU este recomandat.</p>
   </div>
 
@@ -279,7 +293,7 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
   <div class="row cap_tabel">
     <div class="col-xs-3 doc_title"> FLUTURAS DE LICHIDARE</div>
     <div class="col-xs-2 month"> FEBRUARIE</div>
-    <div class="col-xs-1 year"> 2017 </div>
+    <div class="col-xs-1" id="year"> 2017 </div>
     <div class="col-xs-2 name"> IONEL POPESCU </div>
     <div class="col-xs-3 job_title"> SOFER DE AUTOCAMION </div>
   </div>
@@ -308,7 +322,7 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
   </div>
   <div class="row rand_tabel">
     <div class="col-xs-3 r3c1">Salariu aferent timpului lucrat</div>
-    <div class="col-xs-1 r3c2">/</div>
+    <div class="col-xs-1 r3c2"></div>
     <div class="col-xs-1 r3c3">2000</div>
     <div class="col-xs-2 r3c4">Retineri</div>
     <div class="col-xs-1 r3c5"></div>
@@ -321,14 +335,14 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
     <div class="col-xs-1 r4c2">0 </div>
     <div class="col-xs-1 r4c3">0 </div>
     <div class="col-xs-2 r4c4">Depasiri plan net/brut</div>
-    <div class="col-xs-1 r4c5">0/</div>
+    <div class="col-xs-1 r4c5">0</div>
     <div class="col-xs-1 r4c6">0</div>
     <div class="col-xs-2 r4c7">Deducere personala</div>
     <div class="col-xs-1 r4c8">200</div>
   </div>
   <div class="row rand_tabel">
     <div class="col-xs-3 r5c1"> suplimentare</div>
-    <div class="col-xs-1 r5c2">0 /</div>
+    <div class="col-xs-1 r5c2">0</div>
     <div class="col-xs-1 r5c3">0</div>
     <div class="col-xs-2 r5c4">Alte venituri</div>
     <div class="col-xs-1 r5c5"></div>
@@ -338,7 +352,7 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
   </div>
   <div class="row rand_tabel">
     <div class="col-xs-3 r6c1"> suplimentare</div>
-    <div class="col-xs-1 r6c2">0 /</div>
+    <div class="col-xs-1 r6c2">0</div>
     <div class="col-xs-1 r6c3">0</div>
     <div class="col-xs-2 r6c4"></div>
     <div class="col-xs-1 r6c5"></div>
@@ -348,10 +362,10 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
   </div>
   <div class="row rand_tabel">
     <div class="col-xs-3 r7c1"> de noapte</div>
-    <div class="col-xs-1 r7c2">0 /</div>
+    <div class="col-xs-1 r7c2">0</div>
     <div class="col-xs-1 r7c3">0</div>
     <div class="col-xs-2 r7c4">Tichete masa/Stimulente</div>
-    <div class="col-xs-1 r7c5">0.00/</div>
+    <div class="col-xs-1 r7c5">0.00</div>
     <div class="col-xs-1 r7c6">0</div>
     <div class="col-xs-2"><strong class="r7c7">SALARIU NET</strong></div>
     <div class="col-xs-1"><strong class="r7c8">1435</strong></div>
@@ -378,7 +392,7 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
   </div>
   <div class="row rand_tabel">
     <div class="col-xs-3 r10c1">Sp. permanente/Alte sporuri</div>
-    <div class="col-xs-1 r10c2">0/</div>
+    <div class="col-xs-1 r10c2">0</div>
     <div class="col-xs-1 r10c3">0</div>
     <div class="col-xs-2"><strong class="r10c4">SALARIU BRUT REALIZAT</strong></div>
     <div class="col-xs-1 r10c5"></div>
@@ -393,12 +407,14 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
   </div>
   <div class="row rand_tabel">
     <div class="col-xs-3 semnatura"><i >Unterschrift/Handtekening/Signature/Firma/Semnatura</i></div>
-    <div class="col-xs-3 semnatura">&nbsp&nbsp&nbsp&nbsp.............................................</div>
+    <div class="col-xs-1"> </div>
+    <div class="col-xs-3 semnatura">.............................................</div>
   </div>
-  <div class="row rand_tabel">
-    <div class="col-xs-2"> <button class="print_btn1" onclick="Print()">Tipareste Fluturas</button></div>
-    <div class="col-xs-2"> <button class="print_marcati" onclick="PrintMarcati()">Tipareste Fluturasi Selectati</button></div>
-      <div class="col-xs-2" id="select"> <input class="marcat" type="checkbox" name="vehicle" value="Bike">Selectat pt. tiparit<br></div>
+  <div class="row rand_tabel" id="print_btns_text">
+    <div class="col-xs-1"> <button class="print_marcati" onclick="PrintTot()">Tipareste tot</button></div>
+    <div class="col-xs-1"> <button class="print_btn1" onclick="Print()">Tipareste Fluturas</button></div>
+    <div class="col-xs-1"> <button class="print_marcati" onclick="PrintMarcati()">Tipareste Selectati</button></div>
+      <div class="col-xs-1" id="select"> <input class="marcat" type="checkbox" name="selectati" value="">Selectat pt. tiparit<br></div>
     <div class="col-xs-1"><input class="print_btn" type="button" value="Meniu principal" onClick="window.location.reload()"></div>
   </div>
   <!-- test pt page break -->
@@ -408,8 +424,7 @@ Din Mozilla Firefox se poate tipari numai via Microsoft Print to PDF.<br>Interne
 </div>
 <script src="js/display.js"></script>
 <iframe class='myframe' id='myframeGER' src = 'languageGER.txt'> </iframe>
-<iframe class='myframe' id='myframeRO' src = 'language.txt'> </iframe>
-<!-- <iframe class='myframe' id='myframeGER' src = 'languageGER.txt' onload='readLanguage()'> </iframe>
-<iframe class='myframe' id='myframeRO' src = 'language.txt' onload='readLanguage()'> </iframe> -->
+<iframe class='myframe' id='myframeRO' src = 'languageRO.txt'> </iframe>
+<iframe class='myframe' id='myframeIT' src = 'languageIT.txt'> </iframe>
 </body>
 </html>

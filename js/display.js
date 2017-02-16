@@ -31,13 +31,14 @@ $(document).ready(function()
  function go_process(){
 
 
-readLanguage();
 if (luna_selected) {
        try {
      Papa.parse(targetFile, { complete: function(results) {  data=results.data; ProgramStart(results); } });
          }
    catch(err) {
-       alert(err.message+"\n \n Adaugati un fisier cu formatul corect daca nu ati facut asta deja.");
+      //  alert(err.message+"\n \n Adaugati un fisier cu formatul corect daca nu ati facut asta deja.");
+       alert("\n \n Adaugati un fisier cu formatul corect daca nu ati facut asta deja.");
+
    }}
    else alert("Trebuie sa selectati o luna.");
 
@@ -55,19 +56,28 @@ function HideIntro()
 
  function ProgramStart(parsed_data)
  {
-
+   setYear();
+   readLanguage();
    HideIntro();
    AppendTemplate();
    IdentifyColumns(parsed_data);
    PrintData();
  }
 
- //this function is called immediatelly after loading the <iframe> and loads names of categories
+function setYear()
+{
+   if ((document.getElementById('2017').checked)) document.getElementById('year').innerHTML="2017";
+    if ((document.getElementById('2018').checked)) document.getElementById('year').innerHTML="2018";
+     if ((document.getElementById('2019').checked)) document.getElementById('year').innerHTML="2019";
+}
+
+
  function readLanguage() {
  var names;
-   if ((document.getElementById('germana').checked))
-     names=document.getElementById('myframeGER').contentDocument.body.firstChild.innerHTML;
-     else names=document.getElementById('myframeRO').contentDocument.body.firstChild.innerHTML;
+   if ((document.getElementById('germana').checked)) names=document.getElementById('myframeGER').contentDocument.body.firstChild.innerHTML;
+   if ((document.getElementById('romana').checked)) names=document.getElementById('myframeRO').contentDocument.body.firstChild.innerHTML;
+   if ((document.getElementById('italiana').checked)) names=document.getElementById('myframeIT').contentDocument.body.firstChild.innerHTML;
+
 
   tableLine = names.split("\n");//tableLine is an array of category names for the template
 
@@ -296,6 +306,10 @@ function clicklink(luna)
 //           else alert("romana");
 //
 // }
+function PrintTot()
+{
+    window.print();
+}
 
 function PrintDiv(divName) {
 for (var i=0;i<no_of_containers;i++)
@@ -316,5 +330,4 @@ function PrintMarcati()
     for (var i=0;i<no_of_containers;i++)
                 { document.getElementById(i).style.display="block";
               }
-
 }

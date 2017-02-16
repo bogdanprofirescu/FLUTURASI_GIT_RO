@@ -1,0 +1,42 @@
+Stipendio di inquadramento
+Ferie di riposo
+Contributi di Sicurezza sociale
+Ore lavorate/ Stipendio orario
+Stipendio realizzato
+Assicurazione disoccupazione
+Stipendio afferente al tempo lavorato
+Trattenute
+Assicurazione salute
+Ferie senza pagamento(Giorni)/ L`assenza (ore)
+Superamenti di piano netto/ Lordo
+Deduzione personale
+Straordinari
+Altri redditi
+Reddito netto
+Straordinari
+Imposta sullo stipendio
+Ore di notte
+Buoni pasto/Incentivi
+STIPENDIO NETTO
+Contratto di lavoro dal fd. Stipendi (Giorni)
+Anticipo riscosso
+Contratto di lavoro da Ferie  ed Indennita` (Giorni)
+Trattenute
+Sc.  Permanenti/ Altri scatti
+STIPENDIO LORDO REALIZZATO
+RESIDUO DA PAGARE(LEI)
+BUSTA PAGA DI LIQUIDAZIONE GENNAIO (LEI)
+CAMIONISTA
+INDENNITÀ GIORNALIERA (EUR)
+Gennaio
+Febbraio
+Marzo
+Aprile
+Maggio
+Giugno
+Luglio
+Agosto
+Settembre
+Ottobre
+Novembre
+Dicembre
