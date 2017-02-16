@@ -77,7 +77,7 @@ function setYear()
    if ((document.getElementById('germana').checked)) names=document.getElementById('myframeGER').contentDocument.body.firstChild.innerHTML;
    if ((document.getElementById('romana').checked)) names=document.getElementById('myframeRO').contentDocument.body.firstChild.innerHTML;
    if ((document.getElementById('italiana').checked)) names=document.getElementById('myframeIT').contentDocument.body.firstChild.innerHTML;
-    if ((document.getElementById('olandeza').checked)) names=document.getElementById('myframeDU').contentDocument.body.firstChild.innerHTML;
+  
 
 
   tableLine = names.split("\n");//tableLine is an array of category names for the template
