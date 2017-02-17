@@ -1,5 +1,5 @@
 Basisloon
-Verloof
+Verlof
 Sociale verzekeringsfonds
 Gewerkte uren/ Uurloon
 Gerealiseerde loon
@@ -7,11 +7,11 @@ Werkloosheid verzekeringsfonds
 Loon voor de gewerkte tijd
 Inhoudingen op het loon
 Gezondheid verzekeringsfonds
-Onbetaald verloof (dagen)/ Afwezigheid (uren)
+Onbetaald verlof (dagen)/ Afwezigheid (uren)
 Overschrijdingen nettoplan/ Brutto
 Persoonlijke aftrek
 Overuren
-Andere inkomen
+Ander inkomen
 Netto inkomsten
 Overuren
 Loonheffing
@@ -23,8 +23,8 @@ Voorschot
 Vervolging ziekteverloof (dagen)
 Inhoudingen op het loon
 Permanente premies/ Andere premies
-GEREALISEERDE BRUTTOLOON
-DE BETALEN(LEI)
+GEREALISEERDE BRUTTO LOON
+TE BETALEN(LEI)
 AFSCHRIFT VAN VEREFFENING (LEI)
 VRACHTWAGENCHAUFFEUR
 DAGVERGOEDING (EUR)
