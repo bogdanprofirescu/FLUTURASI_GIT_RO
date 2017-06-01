@@ -69,7 +69,6 @@ function setYear()
    if ((document.getElementById('2017').checked)) document.getElementById('year').innerHTML="2017";
     if ((document.getElementById('2018').checked)) document.getElementById('year').innerHTML="2018";
      if ((document.getElementById('2019').checked)) document.getElementById('year').innerHTML="2019";
-
 }
 
 
@@ -79,7 +78,8 @@ function setYear()
    if ((document.getElementById('romana').checked)) names=document.getElementById('myframeRO').contentDocument.body.firstChild.innerHTML;
    if ((document.getElementById('italiana').checked)) names=document.getElementById('myframeIT').contentDocument.body.firstChild.innerHTML;
   if ((document.getElementById('olandeza').checked)) names=document.getElementById('myframeDU').contentDocument.body.firstChild.innerHTML;
-
+  if ((document.getElementById('engleza').checked)) names=document.getElementById('myframeEN').contentDocument.body.firstChild.innerHTML;
+  if ((document.getElementById('franceza').checked)) names=document.getElementById('myframeFR').contentDocument.body.firstChild.innerHTML;
 
   tableLine = names.split("\n");//tableLine is an array of category names for the template
 
@@ -301,13 +301,7 @@ function clicklink(luna)
     // tag_luna.innerHTML=tableLine[index_luna];
 
 }
-// function LoadLanguageInfo(language)
-// {
-//   var x = document.getElementById("germana").checked;
-//   if (x=="true") alert("germana")
-//           else alert("romana");
-//
-// }
+
 function PrintTot()
 {
     window.print();

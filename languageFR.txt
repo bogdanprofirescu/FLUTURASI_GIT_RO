@@ -1,0 +1,42 @@
+Basic salary
+Annual leave
+Health insurance contribution
+Hours worked/hourly salary
+Gross income
+Unemployment contribution
+Salary for the worked hours
+Withholdings
+Health contribution
+Unpaid leave(days)/Absences(hours)
+Workload quota overrun net/gross
+Personal exemption
+Overtime
+Other income
+Net income
+Overtime
+Wage tax
+Night hours
+Meal Tickets/Wage Incentives
+NET SALARY
+Sick leave of salary fund(days)
+Salary advance
+Sick leave of C.C.I.(days)
+Wage withholding
+Permanent benefits/Other benefits
+GROSS SALARY
+REST OF SALARY(LEI)
+PAYSLIP (LEI)
+TRUCK DRIVER
+PER DIEM
+January
+February
+March
+April
+May
+June
+July
+August
+September
+October
+November
+December

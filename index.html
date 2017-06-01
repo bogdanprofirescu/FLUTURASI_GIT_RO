@@ -17,7 +17,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   background: url(butterfly1.jpg) white;
-   background-position: 10px 35px;
+   background-position: -400px -120px;
   overflow: scroll;
 }
 
@@ -25,7 +25,7 @@ body {
    position:absolute;
    left:50%;
    top:30%;
-   width:400px;
+   width:430px;
    height:280px;
    margin-left:-200px; /* -1/2 width */
    margin-top:-50px; /* -1/2 height */
@@ -36,11 +36,14 @@ body {
 	  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ddd, 0 0 0 10px #fff, 0 0 2px 10px #eee;
 }
 #atentie {
+  /*align-items: center;*/
+
+  width: 418px;
   font-size: 11px;
   display: block;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 5px;
 }
 #atentie_cuvant {
   color: red;
@@ -52,7 +55,8 @@ body {
 }
 .container {
 font-size: 14px;
-padding-top: 80px;
+/*padding top este spatiul dintre tabele*/
+padding-top: 2px;
 display: none;
 }
 
@@ -80,15 +84,20 @@ display: none;
   background-color: lightgrey;
   font-weight: bold;
   font-style: italic;
+  padding-top: 3px;
+}
+.company {
+  padding-top: 3px;
 }
 
 .valoare {
   width: 50px;
 }
 .semnatura {
-  padding-top: 15px !important;
+  padding-top: 12px !important;
 
 }
+
 
 /* Dropdown Button */
 .dropbtn {
@@ -148,84 +157,102 @@ display: none;
 #print_btns_text
 {
   font-size: 12px;
+  float: left;
 }
 @media all {
 	.page-break	{ display: none; }
 }
 
+.rand_gol
+{
+  height: 10px !important;
+}
+
+.rand_semantura
+{
+  height: 30px !important;
+}
+
 @media print {
-  .page-break	{ display: block; page-break-before: always; }
+            .row, .mega_container, .container {
+              display: block;
+              page-break-inside: avoid; }
 
-   .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
-        float: left;
-   }
-   .col-xs-12 {
-        width: 100%;
-   }
-   .col-xs-11 {
-        width: 91.66666667%;
-   }
-   .col-xs-10 {
-        width: 83.33333333%;
-   }
-   .col-xs-9 {
-        width: 75%;
-   }
-   .col-xs-8 {
-        width: 66.66666667%;
-   }
-   .col-xs-7 {
-        width: 58.33333333%;
-   }
-   .col-xs-6 {
-        width: 50%;
-   }
-   .col-xs-5 {
-        width: 41.66666667%;
-   }
-   .col-xs-4 {
-        width: 33.33333333%;
-   }
-   .col-xs-3 {
-        width: 25%;
-   }
-   .col-xs-2 {
-        width: 16.66666667%;
-   }
-   .col-xs-1 {
-        width: 8.33333333%;
-   }
+            .div {
+              display: block;
+                 page-break-inside: avoid !important;
+             }
 
-   /*.container {
-    page-break-inside: avoid !important;
-    page-break-after: avoid !important;
-    page-break-before: avoid !important;}*/
+             .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+                  float: left;
+             }
+             .col-xs-12 {
+                  width: 100%;
+             }
+             .col-xs-11 {
+                  width: 91.66666667%;
+             }
+             .col-xs-10 {
+                  width: 83.33333333%;
+             }
+             .col-xs-9 {
+                  width: 75%;
+             }
+             .col-xs-8 {
+                  width: 66.66666667%;
+             }
+             .col-xs-7 {
+                  width: 58.33333333%;
+             }
+             .col-xs-6 {
+                  width: 50%;
+             }
+             .col-xs-5 {
+                  width: 41.66666667%;
+             }
+             .col-xs-4 {
+                  width: 33.33333333%;
+             }
+             .col-xs-3 {
+                  width: 25%;
+             }
+             .col-xs-2 {
+                  width: 16.66666667%;
+             }
+             .col-xs-1 {
+                  width: 8.33333333%;
+             }
 
-.print_btn, .print_btn1, .marcat, .print_marcati {
-      display: none;
-    }
-#select {
-  display: none;
+
+          /*.print_btn, .print_btn1, .marcat, .print_marcati*/
+          .print_btn, #print_btns_text {
+                display: none;
+              }
+
+          #select {
+            display: none;
+          }
+
+          .container {
+            /*size for printing*/
+          font-size: 10px;
+          }
+
+          /*.container
+              {
+                page-break-before: always !important;
+                page-break-after: always !important;
+              }*/
+
+          /*asta ar trebui sa previna print-ul cu link-ul paginii*/
+          @page {
+                  size: auto;   /* auto is the initial value */
+                  margin: 0mm 15mm 0mm 15mm;  /* this affects the margin in the printer settings */
+                  /*top ..right .bottom left */
+                  /*sus am scos marginea de jos a paginilor ca sa nu apara link-ul*/
+              }
 }
-
-.container {
-  /*size for printing*/
-font-size: 14px;
-}
-/*.container
-    {
-      page-break-before: always !important;
-      page-break-after: always !important;
-    }*/
-
-/*asta ar trebui sa previna print-ul cu link-ul paginii*/
-@page {
-        size: auto;   /* auto is the initial value */
-        margin: 0mm 15mm 0mm 15mm;  /* this affects the margin in the printer settings */
-        /*top ..right .bottom left */
-        /*sus am scos marginea de jos a paginilor ca sa nu apara link-ul*/
-    }
-}
+/*end of print related CSS*/
 
 
 </style>
@@ -272,6 +299,8 @@ font-size: 14px;
         <input type="radio" name="limba" id="italiana">Italiana
         <input type="radio" name="limba" id="olandeza">Olandeza
         <input type="radio" name="limba" id="romana">Romana
+        <input type="radio" name="limba" id="engleza">Engleza
+        <input type="radio" name="limba" id="franceza">Franceza
       </form>
       <p id="empty1"></p>
       <p id="empty2"></p>
@@ -280,13 +309,13 @@ font-size: 14px;
 Din Mozilla Firefox(v48+) se poate tipari numai via Microsoft Print to PDF in format de tabel pe toata pagina. Internet Explorer <u>NU</u> este recomandat.</p>
   </div>
 
-</div>
+<!-- </div>
 
 
 </div>
 
 </div>
-</div>
+</div> -->
 
 <div id="mega_container">
 <!--  first dataset-->
@@ -300,12 +329,12 @@ Din Mozilla Firefox(v48+) se poate tipari numai via Microsoft Print to PDF in fo
   </div>
   <div class="row cap_tabel">
     <div class="col-xs-3 doc_title"> FLUTURAS DE LICHIDARE</div>
-    <div class="col-xs-2 month"> FEBRUARIE</div>
+    <div class="col-xs-1 month"> FEBRUARIE</div>
     <div class="col-xs-1" id="year"> 2017 </div>
-    <div class="col-xs-2 name"> IONEL POPESCU </div>
+    <div class="col-xs-3 name"> IONEL POPESCU </div>
     <div class="col-xs-3 job_title"> SOFER DE AUTOCAMION </div>
   </div>
-  <div class="row">
+  <div class="row rand_gol">
     <div class="col-xs-11">&nbsp</div>
   </div>
   <div class="row rand_tabel">
@@ -413,26 +442,28 @@ Din Mozilla Firefox(v48+) se poate tipari numai via Microsoft Print to PDF in fo
     <div class="col-xs-2"><strong class="diurna"></strong></div>
     <div class="col-xs-1"> <strong class="valoare_diurna"></strong></div>
   </div>
-  <div class="row rand_tabel">
-    <div class="col-xs-3 semnatura"><i >Unterschrift/Handtekening/Signature/Firma/Semnatura</i></div>
+  <div class="row rand_tabel rand_semantura">
+    <div class="col-xs-3 semnatura"><i>Unterschrift/Handtekening/Signature/Firma/Semnatura</i></div>
     <div class="col-xs-1"> </div>
     <div class="col-xs-3 semnatura">.............................................</div>
   </div>
   <div class="row rand_tabel" id="print_btns_text">
-    <div class="col-xs-1" id="select"> <input class="marcat" type="checkbox" name="selectati" value="">Selectat pt. tiparit<br></div>
-    <div class="col-xs-1"> <button class="print_marcati" onclick="PrintMarcati()">Tipareste Selectie</button></div>
-    <div class="col-xs-1"> <button class="print_btn1" onclick="Print()">Tipareste Fluturas</button></div>
-    <div class="col-xs-2"> <button class="print_marcati" onclick="PrintTot()">Tipareste Toti Fluturasii</button></div>
+    <div class="col-xs-2" id="select"> <input class="marcat" type="checkbox" name="selectati" value="">Selectat pt. tiparit<br></div>
+    <div class="col-xs-2"> <button class="print_marcati" onclick="PrintMarcati()">Tipareste Selectie</button></div>
+    <div class="col-xs-2"> <button class="print_btn1" onclick="Print()">Tipareste Fluturas</button></div>
+    <div class="col-xs-2"> <button class="print_marcati" onclick="PrintTot()">Tipareste Tot</button></div>
+    <div class="col-xs-3">&nbsp</div>
   </div>
   <!-- test pt page break -->
-  </div>
   <div class="page-break"></div>
-
+  </div>
 </div>
 <script src="js/display.js"></script>
 <iframe class='myframe' id='myframeGER' src = 'languageGER.txt'> </iframe>
 <iframe class='myframe' id='myframeRO' src = 'languageRO.txt'> </iframe>
 <iframe class='myframe' id='myframeIT' src = 'languageIT.txt'> </iframe>
 <iframe class='myframe' id='myframeDU' src = 'languageDU.txt'> </iframe>
+<iframe class='myframe' id='myframeEN' src = 'languageEN.txt'> </iframe>
+<iframe class='myframe' id='myframeFR' src = 'languageFR.txt'> </iframe>
 </body>
 </html>
